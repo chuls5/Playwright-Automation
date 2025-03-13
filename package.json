@@ -1,0 +1,19 @@
+{
+  "name": "playwright-gettingstarted",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.51.0",
+    "@types/node": "^22.13.10"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "playwright-electron": "^0.5.0"
+  }
+}
