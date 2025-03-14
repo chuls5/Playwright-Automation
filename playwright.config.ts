@@ -69,5 +69,5 @@ export default defineConfig({
   ],
   
   /* Test timeout increased for Electron app testing */
-  timeout: 30000, // 30 seconds
+  timeout: 60000, // 60 seconds
 });

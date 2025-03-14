@@ -37,7 +37,7 @@ test('launch e3 desktop application, login, logout', async () => {
   const window = await electronApp.firstWindow();
 
   // Wait for 8 seconds for the app to load
-  await new Promise(resolve => setTimeout(resolve, 7000));
+  await new Promise(resolve => setTimeout(resolve, 8000));
 
   // Fill in the username
   await window.fill('input#username', validUsername2); // Replace 'chuls' with the actual username
@@ -58,6 +58,9 @@ test('launch e3 desktop application, login, logout', async () => {
   // Click on the logout button
   await window.click('#button-logout'); // Click the logout button
 
+  // Wait for 3 seconds for the app to load
+  await new Promise(resolve => setTimeout(resolve, 3000));
+  
   // Wait for the welcome label to appear
   const welcomeLabel = window.locator('label.login-welcome.e3-lang-login-welcome');
   await expect(welcomeLabel).toBeVisible(); // Assert that the welcome label is visible
