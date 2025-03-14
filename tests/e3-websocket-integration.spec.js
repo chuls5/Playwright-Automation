@@ -7,6 +7,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 // Get credentials from environment variables
+const baseUrl = process.env.BASE_URL || 'http://your-application-url.com';
 const validUsername = process.env.VALID_USERNAME || '';
 const validPassword = process.env.VALID_PASSWORD || '';
 const validUsername2 = process.env.VALID_USERNAME2 || '';
@@ -188,8 +189,8 @@ const communicationTest = test.extend({
       resources.videoContainersVerified = true;
       
       // === Step 12: Wait for video data to load ===
-      console.log('Waiting for video data to load (10 seconds)...');
-      await new Promise(resolve => setTimeout(resolve, 10000));
+      console.log('Waiting for video data to load (5 seconds)...');
+      await new Promise(resolve => setTimeout(resolve, 5000));
       console.log('Video call test completed.');
       
     } catch (error) {
